@@ -1,0 +1,3 @@
+/home/teejar/Code/cpp/random_paper/out/Debug/CMakeFiles/random_paper.dir
+/home/teejar/Code/cpp/random_paper/out/Debug/CMakeFiles/edit_cache.dir
+/home/teejar/Code/cpp/random_paper/out/Debug/CMakeFiles/rebuild_cache.dir

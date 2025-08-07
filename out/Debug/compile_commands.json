@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/teejar/Code/cpp/random_paper/out/Debug",
+  "command": "/usr/bin/c++   -Wall -g -std=gnu++23 -o CMakeFiles/random_paper.dir/main.cpp.o -c /home/teejar/Code/cpp/random_paper/main.cpp",
+  "file": "/home/teejar/Code/cpp/random_paper/main.cpp",
+  "output": "CMakeFiles/random_paper.dir/main.cpp.o"
+}
+]
