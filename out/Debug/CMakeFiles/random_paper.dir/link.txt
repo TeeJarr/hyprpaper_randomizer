@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wall -g -Wl,--dependency-file=CMakeFiles/random_paper.dir/link.d CMakeFiles/random_paper.dir/main.cpp.o -o random_paper
