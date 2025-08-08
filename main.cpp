@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <cstdlib>
 #include <filesystem>
 #include <fstream>
@@ -13,15 +14,22 @@ std::string selected_path;
 std::vector<std::string> wallpaper_names;
 
 int main() {
+  std::string user_dir;
   std::string curr_path = std::filesystem::current_path();
-  std::string temp_dir = curr_path.substr(6);
-  temp_dir = temp_dir.substr(temp_dir.find_first_of("/") + 1);
-  std::string user_dir = curr_path.substr(0, curr_path.length() - temp_dir.length());
+  long count = std::count(curr_path.begin(), curr_path.end(), '/');
+  if (count < 2) {
+    std::string temp_dir = curr_path.substr(6);
+    temp_dir = temp_dir.substr(temp_dir.find_first_of("/") + 1);
+    user_dir = curr_path.substr(0, curr_path.length() - temp_dir.length());
+  } else {
+    user_dir = curr_path;
+  }
 
-  wallpaper_path = user_dir + wallpaper_path;
-  conf_path = user_dir + conf_path;
+  wallpaper_path = user_dir + "/" + wallpaper_path;
+  conf_path = user_dir + "/" + conf_path;
 
   std::println("{}\n{}", wallpaper_path, conf_path);
+  // std::println("{}\n{}\n{}", std::string(std::filesystem::current_path()), user_dir, curr_path);
   system("killall hyprpaper");
   if (!std::filesystem::is_directory(wallpaper_path)) {
     std::cerr << "Invalid wallpaper path";
