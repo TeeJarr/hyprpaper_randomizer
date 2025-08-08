@@ -28,8 +28,6 @@ int main() {
   wallpaper_path = user_dir + "/" + wallpaper_path;
   conf_path = user_dir + "/" + conf_path;
 
-  std::println("{}\n{}", wallpaper_path, conf_path);
-  // std::println("{}\n{}\n{}", std::string(std::filesystem::current_path()), user_dir, curr_path);
   system("killall hyprpaper");
   if (!std::filesystem::is_directory(wallpaper_path)) {
     std::cerr << "Invalid wallpaper path";
